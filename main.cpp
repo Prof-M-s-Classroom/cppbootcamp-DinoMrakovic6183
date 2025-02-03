@@ -11,7 +11,7 @@ private:
 
 public:
     // Constructor
-    Robot(string name, string model, int batteryLife) {}
+    Robot(string n, string m, int b):name(n),model(m),batteryLife(b) {}
 
     // Getter Methods
     string getName() { return name; }
@@ -19,14 +19,14 @@ public:
     int getBatteryLife() { return batteryLife; }
 
     // Setter Methods
-    void setName(string name) {
-        this->name = name;
+    void setName(string n) {
+        name = n;
     }
-    void setModel(string model) {
-        this->model = model;
+    void setModel(string m) {
+        model = m;
     }
-    void setBatteryLife(int batteryLife) {
-        this->batteryLife = batteryLife;
+    void setBatteryLife(int b) {
+        batteryLife = b;
     }
 
     // Display function
@@ -128,7 +128,7 @@ int main() {
 
     // Step 9: Use the Fleet template class
     Fleet<string> myFleet(3);
-    myFleet.addRobot(robocop.getName());
+    myFleet.addRobot("Autobot-X");
     myFleet.addRobot("Cybertron-7");
     myFleet.addRobot("NanoDroid-3");
 
